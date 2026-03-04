@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes,Route } from 'react-router-dom'
+import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import RecipeDetails from './Pages/Recipedetails'
 import Favourites from './Pages/Favourites'
