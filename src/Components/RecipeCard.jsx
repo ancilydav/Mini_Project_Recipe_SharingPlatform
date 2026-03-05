@@ -6,4 +6,4 @@ const RecipeCard = () => {
   )
 }
 
-export default RecipeCard
+export default RecipeCard;
