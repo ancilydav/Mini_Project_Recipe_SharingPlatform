@@ -1,8 +1,9 @@
 export const recipesData = [
   {
     id: "1",
-    title: "Veg Biryani",
-    category: "veg",
+    name: "Veg Biryani",
+    cuisine: "Indian",
+    diet: "veg",
     ingredients: [
       "Basmati rice",
       "Carrot",
@@ -14,12 +15,15 @@ export const recipesData = [
       "Mint leaves"
     ],
     preparation: "Cook rice separately. Saute vegetables with spices. Layer rice and vegetables and cook on low heat.",
-    totalTime: "45 min"
+    time: "45 min",
+    difficulty:"medium",
+    image:"https://www.dwarakaorganic.com/wp-content/uploads/2024/07/Veg-Biryani-Recipe-870x470-1.jpg"
   },
   {
     id: "2",
-    title: "Chicken Curry",
-    category: "non-veg",
+    name: "Chicken Curry",
+    cuisine: "Kerala",
+    diet: "non-veg",
     ingredients: [
       "Chicken",
       "Onion",
@@ -30,12 +34,15 @@ export const recipesData = [
       "Garam masala"
     ],
     preparation: "Saute onion and spices. Add chicken pieces and cook well. Add tomato and simmer until tender.",
-    totalTime: "40 min"
+    time: "40 min",
+    difficulty:"medium",
+     image:"https://images.pexels.com/photos/35629938/pexels-photo-35629938.jpeg"
   },
   {
     id: "3",
-    title: "Paneer Butter Masala",
-    category: "veg",
+    name: "Paneer Butter Masala",
+    cuisine: "Indian",
+    diet: "veg",
     ingredients: [
       "Paneer",
       "Butter",
@@ -45,12 +52,15 @@ export const recipesData = [
       "Garam masala"
     ],
     preparation: "Cook onion and tomato puree with spices. Add paneer cubes and finish with cream.",
-    totalTime: "30 min"
+    time: "30 min",
+    difficulty:"medium",
+     image:"https://images.pexels.com/photos/30858402/pexels-photo-30858402.jpeg"
   },
   {
     id: "4",
-    title: "Fish Fry",
-    category: "non-veg",
+    name: "Fish Fry",
+    cuisine: "Kerala",
+    diet: "non-veg",
     ingredients: [
       "Fish fillets",
       "Chili powder",
@@ -60,12 +70,15 @@ export const recipesData = [
       "Oil"
     ],
     preparation: "Marinate fish with spices and lemon. Fry until golden and crispy.",
-    totalTime: "25 min"
+    time: "25 min",
+    difficulty:"medium",
+     image:"https://images.pexels.com/photos/35267289/pexels-photo-35267289.jpeg"
   },
   {
     id: "5",
-    title: "Masala Dosa",
-    category: "veg",
+    name: "Masala Dosa",
+    cuisine: "Indian",
+    diet: "veg",
     ingredients: [
       "Dosa batter",
       "Potato",
@@ -74,12 +87,15 @@ export const recipesData = [
       "Curry leaves"
     ],
     preparation: "Prepare potato masala. Spread dosa batter on pan and add filling before folding.",
-    totalTime: "35 min"
+    time: "35 min",
+    difficulty:"medium",
+     image:"https://images.pexels.com/photos/20422129/pexels-photo-20422129.jpeg"
   },
   {
     id: "6",
-    title: "Egg Fried Rice",
-    category: "non-veg",
+    name: "Egg Fried Rice",
+    cuisine: "Chinese",
+    diet: "non-veg",
     ingredients: [
       "Cooked rice",
       "Eggs",
@@ -89,12 +105,15 @@ export const recipesData = [
       "Beans"
     ],
     preparation: "Scramble eggs. Add vegetables and rice. Stir fry with soy sauce.",
-    totalTime: "20 min"
+    time: "20 min",
+    difficulty:"medium",
+     image:"https://images.pexels.com/photos/32845321/pexels-photo-32845321.jpeg"
   },
   {
     id: "7",
-    title: "Chole Masala",
-    category: "veg",
+    name: "Chole Masala",
+    cuisine: "Indian",
+    diet: "veg",
     ingredients: [
       "Chickpeas",
       "Onion",
@@ -103,12 +122,15 @@ export const recipesData = [
       "Ginger garlic paste"
     ],
     preparation: "Cook chickpeas. Saute onion and tomato with spices and mix with chickpeas.",
-    totalTime: "50 min"
+    time: "50 min",
+    difficulty:"easy",
+     image:"https://glebekitchen.com/wp-content/uploads/2017/10/easychanamasalabowlfront-1.jpg"
   },
   {
     id: "8",
-    title: "Beef Roast",
-    category: "non-veg",
+    name: "Beef Roast",
+    cuisine: "Kerala",
+    diet: "non-veg",
     ingredients: [
       "Beef",
       "Onion",
@@ -118,12 +140,15 @@ export const recipesData = [
       "Garam masala"
     ],
     preparation: "Pressure cook beef with spices. Roast with onion and curry leaves.",
-    totalTime: "60 min"
+    time: "60 min",
+    difficulty:"medium",
+     image:"https://www.spiceandlife.com/wp-content/uploads/2023/02/Kerala-Beef-Fry.jpg"
   },
   {
     id: "9",
-    title: "Vegetable Salad",
-    category: "veg",
+    name: "Vegetable Salad",
+    cuisine: "Indian",
+    diet: "veg",
     ingredients: [
       "Cucumber",
       "Tomato",
@@ -133,12 +158,15 @@ export const recipesData = [
       "Lemon juice"
     ],
     preparation: "Chop vegetables and mix with olive oil and lemon dressing.",
-    totalTime: "10 min"
+    time: "10 min",
+    difficulty:"easy",
+     image:"https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg"
   },
   {
     id: "10",
-    title: "Grilled Chicken",
-    category: "non-veg",
+    name: "Grilled Chicken",
+    cuisine: "Indian",
+    diet: "non-veg",
     ingredients: [
       "Chicken breast",
       "Olive oil",
@@ -148,6 +176,8 @@ export const recipesData = [
       "Pepper"
     ],
     preparation: "Marinate chicken with spices and grill until fully cooked.",
-    totalTime: "30 min"
+    time: "30 min",
+    difficulty:"medium",
+    image:"https://images.pexels.com/photos/5031938/pexels-photo-5031938.jpeg"
   }
 ];
