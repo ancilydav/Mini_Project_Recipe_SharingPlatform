@@ -1,18 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
-import Recipes from "../data/Recipe"
+import recipes from "../data/Recipe"
 
 const initialState={
-    allRecipies :Recipes,
-    filtredRecipies:Recipes,
+    recipies:recipes,
     search:"",
-    filter:"All"
+    diet:"All",
+    cuisine:"All",
+    difficulty:"All"
 
 };
 
 const recipeSlice = createSlice({
     name:"recipes",
     initialState,
-    reducers:{}
+    reducers:{
+        setSearch(state,action){
+            state.search = action.payload;
+        },
+        setCusine(state,action){
+            state.cuisine= action.payload;
+        },
+        setDiet(state,action){
+            state.diet = action.payload;
+        },
+        setDifficulty(state,action){
+            state.difficulty = action.payload;
+        }
+    }
 });
 
+
+export const {setSearch,setCusine,setDiet,setDifficulty} = recipeSlice.actions;
 export default recipeSlice.reducer;
