@@ -14,7 +14,11 @@ export const recipesData = [
       "Curd",
       "Mint leaves"
     ],
-    preparation: "Cook rice separately. Saute vegetables with spices. Layer rice and vegetables and cook on low heat.",
+    preparation:[
+      "Cook rice separately",
+       "Saute vegetables with spices", 
+       "Layer rice and vegetables",  
+       "cook on low heat"],
     time: "45 min",
     difficulty:"medium",
     image:"https://www.dwarakaorganic.com/wp-content/uploads/2024/07/Veg-Biryani-Recipe-870x470-1.jpg"
@@ -33,7 +37,10 @@ export const recipesData = [
       "Turmeric",
       "Garam masala"
     ],
-    preparation: "Saute onion and spices. Add chicken pieces and cook well. Add tomato and simmer until tender.",
+    preparation: [
+      "Saute onion and spices",
+       "Add chicken pieces and cook well", 
+       "Add tomato and simmer until tender"],
     time: "40 min",
     difficulty:"medium",
      image:"https://images.pexels.com/photos/35629938/pexels-photo-35629938.jpeg"
@@ -51,7 +58,10 @@ export const recipesData = [
       "Onion",
       "Garam masala"
     ],
-    preparation: "Cook onion and tomato puree with spices. Add paneer cubes and finish with cream.",
+    preparation: [
+      "Cook onion and tomato puree with spices",
+      "Add paneer cubes" ,
+      "Garnish with cream"],
     time: "30 min",
     difficulty:"medium",
      image:"https://images.pexels.com/photos/30858402/pexels-photo-30858402.jpeg"
@@ -69,7 +79,9 @@ export const recipesData = [
       "Salt",
       "Oil"
     ],
-    preparation: "Marinate fish with spices and lemon. Fry until golden and crispy.",
+    preparation: [
+      "Marinate fish with spices and lemon",
+      "Fry until golden and crispy"],
     time: "25 min",
     difficulty:"medium",
      image:"https://images.pexels.com/photos/35267289/pexels-photo-35267289.jpeg"
@@ -86,7 +98,10 @@ export const recipesData = [
       "Mustard seeds",
       "Curry leaves"
     ],
-    preparation: "Prepare potato masala. Spread dosa batter on pan and add filling before folding.",
+    preparation:[
+      "Prepare potato masala",
+      "Spread dosa batter on pan", 
+      "add filling before folding"],
     time: "35 min",
     difficulty:"medium",
      image:"https://images.pexels.com/photos/20422129/pexels-photo-20422129.jpeg"
@@ -104,7 +119,10 @@ export const recipesData = [
       "Carrot",
       "Beans"
     ],
-    preparation: "Scramble eggs. Add vegetables and rice. Stir fry with soy sauce.",
+    preparation: [
+      "Scramble eggs",
+      "Add vegetables and rice",
+      "Stir fry with soy sauce"],
     time: "20 min",
     difficulty:"medium",
      image:"https://images.pexels.com/photos/32845321/pexels-photo-32845321.jpeg"
@@ -121,7 +139,10 @@ export const recipesData = [
       "Chole masala",
       "Ginger garlic paste"
     ],
-    preparation: "Cook chickpeas. Saute onion and tomato with spices and mix with chickpeas.",
+    preparation: [
+    "Cook chickpeas",
+    "Saute onion and tomato with spices",
+    "mix with chickpeas"],
     time: "50 min",
     difficulty:"easy",
      image:"https://glebekitchen.com/wp-content/uploads/2017/10/easychanamasalabowlfront-1.jpg"
@@ -139,7 +160,9 @@ export const recipesData = [
       "Curry leaves",
       "Garam masala"
     ],
-    preparation: "Pressure cook beef with spices. Roast with onion and curry leaves.",
+    preparation:[ 
+      "Pressure cook beef with spices",
+      "Roast with onion and curry leaves"],
     time: "60 min",
     difficulty:"medium",
      image:"https://www.spiceandlife.com/wp-content/uploads/2023/02/Kerala-Beef-Fry.jpg"
@@ -157,7 +180,10 @@ export const recipesData = [
       "Olive oil",
       "Lemon juice"
     ],
-    preparation: "Chop vegetables and mix with olive oil and lemon dressing.",
+    preparation: [
+    "Chop vegetables",
+    "mix with olive oil", 
+    "lemon dressing"],
     time: "10 min",
     difficulty:"easy",
      image:"https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg"
@@ -175,7 +201,9 @@ export const recipesData = [
       "Salt",
       "Pepper"
     ],
-    preparation: "Marinate chicken with spices and grill until fully cooked.",
+    preparation: [
+    "Marinate chicken with spices",
+     "grill until fully cooked"],
     time: "30 min",
     difficulty:"medium",
     image:"https://images.pexels.com/photos/5031938/pexels-photo-5031938.jpeg"
