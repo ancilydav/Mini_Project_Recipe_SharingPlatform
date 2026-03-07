@@ -16,7 +16,7 @@ const Home = () => {
   })
   return (
     <div className='bg-white shadow-md rounded-lg p-4 mb-6'>
-      <h2 className='text-xl font-semibold mb-3'>Filter Recipes</h2>
+      <h2 className='text-xl font-semibold mb-3'> Recipes</h2>
       <Search/>
       <div className='flex flex-wrap gap-3 mt-4'>
         <Filter/>

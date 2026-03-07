@@ -14,7 +14,7 @@ const Recipedetails = () => {
       <h1 className='text-3xl font-bold mb-4'>{recipe.name}</h1>
       <img
       src={recipe.image}
-      className='w-full h-60 object-cover rounded'/>
+      className='w-100 h-80 object-cover rounded'/>
       <h2 className='text-xl font-semibold mt-4'>Ingredients</h2>
       <ul>
         {recipe.ingredients.map((item,index)=>(
@@ -26,7 +26,9 @@ const Recipedetails = () => {
         {recipe.preparation.map((preparation,index)=>(
           <li key={index}>{preparation}</li>
         ))}
-      </ul>
+        </ul>
+        <p className='text-l font-semibold mt-4'>Time:{recipe.time}</p>
+         <p className='text-l font-semibold'>Difficulty:{recipe.difficulty}</p>
     </div>
   )
 }

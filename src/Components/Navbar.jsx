@@ -7,8 +7,7 @@ const Navbar = () => {
       <h1 className=' font-bold text-xl'>FlavourLoop</h1>
       <div className='space-x-4 text-l'>
         <Link to="/">Home</Link>
-        <Link to="/recipe">RecipeDetails</Link>
-        <Link to="/favourites">Favourites</Link>
+       <Link to="/favourites">Favourites</Link>
       </div>
 
     </div>
