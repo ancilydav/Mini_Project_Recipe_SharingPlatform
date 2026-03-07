@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import recipes from "../data/Recipe"
 
 const initialState={
-    recipies:recipes,
+    recipes:recipes,
     search:"",
     diet:"All",
     cuisine:"All",
@@ -17,7 +17,7 @@ const recipeSlice = createSlice({
         setSearch(state,action){
             state.search = action.payload;
         },
-        setCusine(state,action){
+        setCuisine(state,action){
             state.cuisine= action.payload;
         },
         setDiet(state,action){
@@ -30,5 +30,5 @@ const recipeSlice = createSlice({
 });
 
 
-export const {setSearch,setCusine,setDiet,setDifficulty} = recipeSlice.actions;
+export const {setSearch,setCuisine,setDiet,setDifficulty} = recipeSlice.actions;
 export default recipeSlice.reducer;
