@@ -1,10 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import Search from '../Components/Search'
 import Filter from '../Components/Filter'
 import RecipeCard from '../Components/RecipeCard'
 
+
 const Home = () => {
+  const navigate =useNavigate();
   const {recipes,search,diet,cuisine,difficulty,}=useSelector((state)=>state.recipes)
   const filteredRecipes = recipes.filter((recipe)=>{
     return(
@@ -26,8 +29,12 @@ const Home = () => {
         {filteredRecipes.map((recipe)=>(
           <RecipeCard key={recipe.id} recipe={recipe}/>
         )
-
         )}
+      <div>
+      <button 
+      onClick={()=>navigate("/favourites")}
+      className='bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 flex justify-center '>View Favourites</button>
+      </div>
       </div>
 
     </div>

@@ -29,6 +29,8 @@ const Recipedetails = () => {
         </ul>
         <p className='text-l font-semibold mt-4'>Time:{recipe.time}</p>
          <p className='text-l font-semibold'>Difficulty:{recipe.difficulty}</p>
+
+         
     </div>
   )
 }

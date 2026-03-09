@@ -7,6 +7,7 @@ const initialState = {
   diet: "All",
   cuisine: "All",
   difficulty: "All",
+  favourites:[]
 };
 
 const recipeSlice = createSlice({
@@ -25,9 +26,24 @@ const recipeSlice = createSlice({
     setDifficulty(state, action) {
       state.difficulty = action.payload;
     },
-  },
+
+    addFavourite:(state,action)=>{
+      const exists=state.favourites.find(
+        (recipe)=>recipe.id===action.payload.id
+      )
+      if(!exists){
+        state.favourites.push(action.payload)
+      }
+    },
+
+    removeFavourite:(state,action)=>{
+      state.favourites=state.favourites.filter(
+        (recipe)=>recipe.id!==action.payload
+      );
+    }
+ }
 });
 
-export const { setSearch, setCuisine, setDiet, setDifficulty } =
+export const { setSearch, setCuisine, setDiet, setDifficulty,addFavourite,removeFavourite } =
   recipeSlice.actions;
 export default recipeSlice.reducer;

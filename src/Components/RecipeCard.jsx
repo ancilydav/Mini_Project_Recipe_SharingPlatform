@@ -1,7 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { addFavourite } from '../Features/recipeSlice';
+import { useDispatch } from 'react-redux';
 
 const RecipeCard = ({recipe}) => {
+  const dispatch=useDispatch();
   const navigate =useNavigate();
   return (
     <div className='border rounded shadow p-3'>
@@ -12,10 +15,15 @@ const RecipeCard = ({recipe}) => {
       <p className='text-l font-semibold '> Cuisine: {recipe.cuisine}</p>
       <p>Diet: {recipe.diet}</p>
       <p> Rating: {recipe.Rating}</p>
-      
+
+      <div className='flex gap-4'>
       <button
       onClick={()=>navigate(`/recipe/${recipe.id}`)}
-      className='bg-green-500 text-white p-2 mt-2 rounded'>View Recipe</button>
+      className='bg-green-500 text-white p-2 mt-4 hover:bg-green-300 rounded'>View Recipe</button>
+      <button
+         onClick={()=>dispatch(addFavourite(recipe))}
+         className='bg-orange-500 text-white p-2 mt-4 hover:bg-orange-300 rounded'>Add to Favourites</button>
+         </div>
 
 </div>
   )
