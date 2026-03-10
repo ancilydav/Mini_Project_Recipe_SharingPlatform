@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { recipesData } from "../data/Recipe";
 
+const storedRecipes=JSON.parse(localStorage.getItem("recipes"))||[];
 const initialState = {
-  recipes: recipesData,
+  recipes:storedRecipes.length > 0 ? storedRecipes : recipesData,
   search: "",
   diet: "All",
   cuisine: "All",
@@ -40,10 +41,24 @@ const recipeSlice = createSlice({
       state.favourites=state.favourites.filter(
         (recipe)=>recipe.id!==action.payload
       );
-    }
+    },
+      // Authentication
+
+      addRecipe:(state,action)=>{
+        state.recipes.push(action.payload);
+        localStorage.setItem("recipes", JSON.stringify(state.recipes)
+      );
+      },
+      deleteRecipe:(state,action)=>{
+        state.recipes=state.recipes.filter(
+        (recipe)=>recipe.id !==action.payload
+      );
+      localStorage.setItem("recipes",JSON.stringify(state.recipes)
+    );
+   }
  }
 });
 
-export const { setSearch, setCuisine, setDiet, setDifficulty,addFavourite,removeFavourite } =
+export const { setSearch, setCuisine, setDiet, setDifficulty,addFavourite,removeFavourite, addRecipe,deleteRecipe } =
   recipeSlice.actions;
 export default recipeSlice.reducer;

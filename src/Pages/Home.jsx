@@ -11,7 +11,7 @@ const Home = () => {
   const {recipes,search,diet,cuisine,difficulty,}=useSelector((state)=>state.recipes)
   const filteredRecipes = recipes.filter((recipe)=>{
     return(
-      recipe.name.toLowerCase().includes(search.toLowerCase())&&
+      recipe?.name?.toLowerCase().includes(search.toLowerCase())&&
       (diet==="All"||recipe.diet===diet)&&
       (cuisine==="All"||recipe.cuisine===cuisine)&&
       (difficulty==="All"||recipe.difficulty===difficulty)

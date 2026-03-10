@@ -21,7 +21,8 @@ const RecipeCard = ({recipe}) => {
       onClick={()=>navigate(`/recipe/${recipe.id}`)}
       className='bg-green-500 text-white p-2 mt-4 hover:bg-green-300 rounded'>View Recipe</button>
       <button
-         onClick={()=>dispatch(addFavourite(recipe))}
+         onClick={()=>{
+          dispatch(addFavourite(recipe)); alert("Added to favourites")}}
          className='bg-orange-500 text-white p-2 mt-4 hover:bg-orange-300 rounded'>Add to Favourites</button>
          </div>
 

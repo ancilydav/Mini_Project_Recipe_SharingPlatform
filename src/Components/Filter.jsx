@@ -41,7 +41,6 @@ const Filter = () => {
       onChange={(e)=>dispatch(setDifficulty(e.target.value))}
       className='border rounded p-2 w-full '
       >
-        <h2 className='font-semibold'>Diffculty</h2>
         <option value="All">All</option>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
