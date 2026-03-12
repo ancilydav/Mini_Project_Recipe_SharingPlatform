@@ -1,20 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { recipesData } from "../data/Recipe";
 
-const storedRecipes=JSON.parse(localStorage.getItem("recipes"))||[];
+const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+const storedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
 const initialState = {
-  recipes:storedRecipes.length > 0 ? storedRecipes : recipesData,
+  recipes: storedRecipes.length > 0 ? storedRecipes : recipesData,
   search: "",
   diet: "All",
   cuisine: "All",
   difficulty: "All",
-  favourites:[]
+  favourites: storedFavourites,
 };
 
 const recipeSlice = createSlice({
   name: "recipes",
   initialState,
   reducers: {
+    // Filters
+
     setSearch(state, action) {
       state.search = action.payload;
     },
@@ -28,37 +31,48 @@ const recipeSlice = createSlice({
       state.difficulty = action.payload;
     },
 
-    addFavourite:(state,action)=>{
-      const exists=state.favourites.find(
-        (recipe)=>recipe.id===action.payload.id
-      )
-      if(!exists){
-        state.favourites.push(action.payload)
+    // Favourites
+
+    addFavourite: (state, action) => {
+      const exists = state.favourites.find(
+        (recipe) => recipe.id === action.payload.id,
+      );
+      if (!exists) {
+        state.favourites.push(action.payload);
+        localStorage.setItem("favourites", JSON.stringify(state.favourites));
       }
     },
 
-    removeFavourite:(state,action)=>{
-      state.favourites=state.favourites.filter(
-        (recipe)=>recipe.id!==action.payload
+    removeFavourite: (state, action) => {
+      state.favourites = state.favourites.filter(
+        (recipe) => recipe.id !== action.payload,
       );
+      localStorage.setItem("favourites", JSON.stringify(state.favourites));
     },
-      // Authentication
 
-      addRecipe:(state,action)=>{
-        state.recipes.push(action.payload);
-        localStorage.setItem("recipes", JSON.stringify(state.recipes)
+    // UserRecipes
+
+    addRecipe: (state, action) => {
+      state.recipes.push(action.payload);
+      localStorage.setItem("recipes", JSON.stringify(state.recipes));
+    },
+    deleteRecipe: (state, action) => {
+      state.recipes = state.recipes.filter(
+        (recipe) => recipe.id !== action.payload,
       );
-      },
-      deleteRecipe:(state,action)=>{
-        state.recipes=state.recipes.filter(
-        (recipe)=>recipe.id !==action.payload
-      );
-      localStorage.setItem("recipes",JSON.stringify(state.recipes)
-    );
-   }
- }
+      localStorage.setItem("recipes", JSON.stringify(state.recipes));
+    },
+  },
 });
 
-export const { setSearch, setCuisine, setDiet, setDifficulty,addFavourite,removeFavourite, addRecipe,deleteRecipe } =
-  recipeSlice.actions;
+export const {
+  setSearch,
+  setCuisine,
+  setDiet,
+  setDifficulty,
+  addFavourite,
+  removeFavourite,
+  addRecipe,
+  deleteRecipe,
+} = recipeSlice.actions;
 export default recipeSlice.reducer;

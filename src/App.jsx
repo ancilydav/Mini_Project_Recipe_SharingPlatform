@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/recipe/:id" element={<RecipeDetails />} />
         <Route path="/login" element={<Login />} />
 
-        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/favourites" element={<ProtectedRoute><Favourites /></ProtectedRoute>}/>
         <Route
           path="/myrecipes"
           element={
