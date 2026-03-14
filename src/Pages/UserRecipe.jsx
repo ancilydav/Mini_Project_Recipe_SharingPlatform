@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addRecipe, deleteRecipe } from "../Features/recipeSlice";
+import { toast } from "react-toastify";
 
 const UserRecipe = () => {
   const [title, setTitle] = useState("");
@@ -29,6 +30,7 @@ const UserRecipe = () => {
     };
 
     dispatch(addRecipe(newRecipe));
+    toast.success("Recipe Added");
     setTitle("");
     setDiet("");
     setImage("");

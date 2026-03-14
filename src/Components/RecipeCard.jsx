@@ -2,18 +2,22 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { addFavourite, removeFavourite } from "../Features/recipeSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const RecipeCard = ({ recipe }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const favourites = useSelector((state) => state.recipes.favourites);
-  const isFavourite = favourites.find((item) => item.id === recipe.id);
+  const user = useSelector((state) => state.auth.user);
+  const storedFavourites = user ? JSON.parse(localStorage.getItem(`favourites_${user.name}`)) || [] : [];
+  const isFavourite = storedFavourites.find((item) => item.id === recipe.id);
 
   const handleFavourite = () => {
     if (isFavourite) {
       dispatch(removeFavourite(recipe.id));
+      toast.error("Removed from favourites");
     } else {
       dispatch(addFavourite(recipe));
+      toast.success("Added to favourites");
     }
   };
 

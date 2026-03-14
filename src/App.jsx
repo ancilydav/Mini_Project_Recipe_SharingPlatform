@@ -7,6 +7,7 @@ import Favourites from "./Pages/Favourites";
 import Login from "./Pages/Login";
 import UserRecipe from "./Pages/UserRecipe";
 import ProtectedRoute from "./Components/ProtectedRoute";
+import Footer from "./Components/Footer";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
           }
         />
       </Routes>
+      <Footer/>
     </div>
   );
 };

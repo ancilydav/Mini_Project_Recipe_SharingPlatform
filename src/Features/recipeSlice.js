@@ -1,7 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { recipesData } from "../data/Recipe";
 
-const storedFavourites = JSON.parse(localStorage.getItem("favourites")) || [];
+const user = JSON.parse(localStorage.getItem("user"));
+const storedFavourites = user
+  ? JSON.parse(localStorage.getItem(`favourites_${user.name}`)) || []
+  : [];
 const storedRecipes = JSON.parse(localStorage.getItem("recipes")) || [];
 const initialState = {
   recipes: storedRecipes.length > 0 ? storedRecipes : recipesData,
@@ -39,7 +42,9 @@ const recipeSlice = createSlice({
       );
       if (!exists) {
         state.favourites.push(action.payload);
-        localStorage.setItem("favourites", JSON.stringify(state.favourites));
+
+        const user = JSON.parse(localStorage.getItem("user"))
+        localStorage.setItem(`favourites_${user.name}`, JSON.stringify(state.favourites));
       }
     },
 
@@ -47,7 +52,9 @@ const recipeSlice = createSlice({
       state.favourites = state.favourites.filter(
         (recipe) => recipe.id !== action.payload,
       );
-      localStorage.setItem("favourites", JSON.stringify(state.favourites));
+
+      const user = JSON.parse(localStorage.getItem("user"))
+      localStorage.setItem(`favourites_${user.name}`, JSON.stringify(state.favourites));
     },
 
     // UserRecipes

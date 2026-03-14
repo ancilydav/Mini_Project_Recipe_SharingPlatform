@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { login } from "../Features/authSlice";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -18,6 +19,7 @@ const Login = () => {
       name: username,
     };
     dispatch(login(user));
+    toast.success("Logged in successfully");
     naviagte("/");
   };
 
