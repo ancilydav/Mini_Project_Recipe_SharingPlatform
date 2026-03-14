@@ -26,6 +26,7 @@ const speakSteps = () => {
   const speakNext = () => {
     if (i < allSteps.length) {
       const speech = new SpeechSynthesisUtterance(allSteps[i]);
+      speech.rate=0.3;
       speech.onend = () => {
         i++;
         speakNext();
@@ -59,7 +60,7 @@ const speakSteps = () => {
 
        <button
         onClick={speakSteps}
-        className="bg-purple-500 text-white px-4 py-2 rounded mt-4 hover:bg-purple-700">🔉 Hands-free Cooking</button>
+        className="bg-purple-500 text-white px-4 py-2 rounded mt-4 hover:bg-purple-700">🔈 Hands-free Cooking</button>
 
       <Timer />
     </div>
